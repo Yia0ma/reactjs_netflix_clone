@@ -4,7 +4,8 @@ import Jumbotron from "../components/jumbotron/index";
 
 const Home = () => (
     <Jumbotron.Container>
-        <p>Hello</p>
+        <Jumbotron.Title>Hello World!</Jumbotron.Title>
+        <Jumbotron.SubTitle>This is a subtitle.</Jumbotron.SubTitle>
     </Jumbotron.Container>
 );
 
