@@ -24,7 +24,7 @@ export const Item = styled.div`
 
 export const Pane = styled.div`
     width: 50%;
-
+    
     @media (max-width: 1000px) {
         width: 100%;
         padding: 0 2.3em;

@@ -1,7 +1,5 @@
 import React from "react";
-
 import {Container, Pane, Item, Inner, Title, SubTitle, Image} from "./styles/jumbotron";
-
 
 const Jumbotron = ({children, direction="row", ...props}) => {
     return (
