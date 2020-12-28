@@ -41,22 +41,27 @@ export const Title = styled.h1`
     line-height: 1.1;
     margin-bottom: .5rem;
 
-    @media (max-width: 600px) {
-        font-size: 2rem;
+    @media (max-width: 949px) {
+        font-size: 2.5rem;
+    }
+
+    @media (max-width: 549px) {
+        font-size: 1.625rem;
     }
 `;
 
 export const SubTitle = styled.h2`
     font-size: 1.625rem;
     font-weight: 400;
-    line-height: 1.14;
+    margin: .75em 0 .25em;
 
-    @media (max-width: 1000px) {
-        margin-bottom: 2.5em;
+    @media (max-width: 949px) {
+        font-size: 1.25rem;
+        margin-bottom: 1em;
     }
 
-    @media (max-width: 600px) {
-        font-size: 1rem;
+    @media (max-width: 549px) {
+        font-size: 1.125rem;
     }
 `;
 
