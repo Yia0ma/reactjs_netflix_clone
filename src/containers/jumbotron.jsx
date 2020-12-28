@@ -5,7 +5,7 @@ import {Jumbotron} from "../components";
 const JumbotronContainer = () => (
     <Jumbotron.Container>
         {jumboData.map((item) => (
-            <Jumbotron key={item.id} direction={item.direction}>
+            <Jumbotron key={`jumbotron-${item.id}`} direction={item.direction}>
                 <Jumbotron.Pane>
                     <Jumbotron.Title>{item.title}</Jumbotron.Title>
                     <Jumbotron.SubTitle>{item.subTitle}</Jumbotron.SubTitle>
