@@ -1,13 +1,11 @@
 import React from "react";
 import {Container, Pane, Item, Inner, Title, SubTitle, Image} from "./styles/jumbotron";
 
-const Jumbotron = ({children, direction="row", ...props}) => {
-    return (
-        <Item {...props}>
-            <Inner direction={direction}>{children}</Inner>
-        </Item>
-    );
-};
+const Jumbotron = ({children, direction="row", ...props}) => (
+    <Item {...props}>
+        <Inner direction={direction}>{children}</Inner>
+    </Item>
+);
 
 Jumbotron.Container = ({children, ...props}) => 
     <Container {...props}>{children}</Container>;
