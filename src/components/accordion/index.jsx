@@ -1,11 +1,13 @@
 import React, {useState} from "react";
-import {Container, Item, Inner, Title, Header, Body} from "./styles/accordion";
+import {Container, Inner, Frame, Item,  Title, Header, Body} from "./styles/accordion";
 
 const Accordion = ({children, ...props}) => (
     <Container {...props}>
         <Inner>{children}</Inner>
     </Container>
 );
+
+Accordion.Frame = ({children, ...props}) => <Frame {...props}>{children}</Frame>;
 
 Accordion.Item = ({children, ...props}) => <Item {...props}>{children}</Item>;
 

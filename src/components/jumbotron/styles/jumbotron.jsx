@@ -17,7 +17,7 @@ export const Inner = styled.div`
 export const Item = styled.div`
     display: flex;
     border-bottom: 8px solid #222;
-    padding: 2.5em 5%;
+    padding: 4.38em 2.81em;
     color: #fff;
     overflow: hidden;
 `;
