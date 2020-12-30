@@ -7,10 +7,10 @@ const App = () => {
     return (
         <Router>
             <Switch>
-                <Route path={ROUTES.SING_UP}>
+                <Route path={ROUTES.SIGN_UP}>
                     <h1>Sign Up</h1>
                 </Route>
-                <Route path={ROUTES.SING_IN}>
+                <Route path={ROUTES.SIGN_IN}>
                     <h1>Sign In</h1>
                 </Route>
                 <Route path={ROUTES.BROWSE}>
