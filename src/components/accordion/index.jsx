@@ -37,8 +37,8 @@ Accordion.Header = ({children, ...props}) => {
 };
 
 Accordion.Body = ({children, ...props}) => {
-    const [toggleShow] = useContext(ToggleContext);
-    
+    const {toggleShow} = useContext(ToggleContext);
+
     return (toggleShow ? <Body {...props}>{children}</Body> : null);
 };
 
