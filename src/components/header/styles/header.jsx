@@ -10,6 +10,8 @@ export const Container = styled.div``;
 
 export const Link = styled.p``;
 
-export const ButtonLink = styled(ReachRouterLink)``;
+export const ButtonLink = styled(ReachRouterLink)`
+    
+`;
 
 export const Logo = styled.img``;

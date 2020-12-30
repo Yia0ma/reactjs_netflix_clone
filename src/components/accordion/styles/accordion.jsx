@@ -8,31 +8,46 @@ export const Container = styled.section`
 
 export const Inner = styled.div`
     display: flex;
-    padding: 4.38em 2.81em;
+    padding: 70px 45px;
     flex-direction: column;
-    max-width: 815px;
     margin: auto;
+
+    @media (max-width: 549px) {
+        width: 100%;
+        padding: 4.38em 0;
+    }
+
+    @media (max-width: 549px) {
+        width: 100%;
+        padding: 3.12em 0;
+    }
 `;
 
 export const Frame = styled.div`
-    margin-bottom: 40px;
+    width: 75%;
+    margin: 2em auto;
+
+    @media (max-width: 949px) {
+        width: 90%;
+    }
+
+    @media (max-width: 549px) {
+        width: 100%;
+    }
 `;
 
 export const Item = styled.div`
     color: #fff;
     margin-bottom: .5em;
-
-    &:first-of-type {
-        margin-top: 3em;
-    }
 `;
 
 export const Title = styled.h1`
     font-size: 3.125rem;
     line-height: 1.1;
-    margin-bottom: .5em;
+    margin-bottom: .5rem;
     color: #fff;
     text-align: center;
+    padding: 0 5%;
 
     @media (max-width: 949px) {
         font-size: 2.5rem;

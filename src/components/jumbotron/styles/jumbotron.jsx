@@ -8,16 +8,20 @@ export const Inner = styled.div`
     max-width: 1100px;
     margin: auto;
     width: 100%;
+    padding: 4.38em 2.81em;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 949px) {
         flex-direction: column;
+    }
+
+    @media (max-width: 549px) {
+        padding: 3.12em 5%;
     }
 `;
 
 export const Item = styled.div`
     display: flex;
     border-bottom: 8px solid #222;
-    padding: 4.38em 2.81em;
     color: #fff;
     overflow: hidden;
 `;
@@ -25,10 +29,14 @@ export const Item = styled.div`
 export const Pane = styled.div`
     width: 50%;
     
-    @media (max-width: 1000px) {
+    @media (max-width: 949px) {
         width: 100%;
         padding: 0 2.3em;
         text-align: center;
+    }
+
+    @media (max-width: 549px) {
+        padding: 0;
     }
 `;
 

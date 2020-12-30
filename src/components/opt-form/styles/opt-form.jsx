@@ -4,17 +4,24 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    row-gap: 1.5em;
     text-align: center;
-    margin-top: 2em;
+
+    @media (max-width: 949px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
 `;
 
 export const Text = styled.p`
     font-size: 1.2rem;
     color: #fff;
+    padding: 0 5%;
+    padding-bottom: 1.25em;
 
     @media (max-width: 949px) {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
+        padding-bottom: .5em;
     }
 
     @media (max-width: 549px) {
@@ -24,7 +31,12 @@ export const Text = styled.p`
 
 export const Input = styled.input`
     width: 500px;
-    padding: 1em;
+    padding: 1.2em;
+    font-size: 1rem;
+
+    @media (max-width: 949px) {
+        margin-bottom: 1em;
+    }
 
     @media (max-width: 549px) {
         width: 90%;
@@ -47,5 +59,11 @@ export const Button = styled.button`
     img {
         filter: brightness(0) invert(1);
         width: 1em;
+    }
+
+    @media (max-width: 949px) {
+        margin-bottom: 1em;
+        font-size: 1rem;
+        padding: .8em 1em;
     }
 `;
