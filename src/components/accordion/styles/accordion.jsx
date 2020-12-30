@@ -19,7 +19,7 @@ export const Frame = styled.div`
 
 export const Item = styled.div`
     color: #fff;
-    margin-bottom: 10px;
+    margin-bottom: .5em;
 
     &:first-of-type {
         margin-top: 3em;
@@ -53,6 +53,11 @@ export const Header = styled.div`
     padding: .8em 1.2em .8em 1.2em;
     user-select: none;
     align-items: center;
+
+    img {
+        filter: brightness(0) invert(1);
+        width: 1em;
+    }
 
     @media (max-width: 949px) {
         font-size: 1.25rem;
