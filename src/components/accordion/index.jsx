@@ -1,5 +1,4 @@
 import React, {useState, useContext, createContext} from "react";
-import { useTheme } from "styled-components";
 import {Container, Inner, Frame, Item,  Title, Header, Body} from "./styles/accordion";
 
 const ToggleContext = createContext();
@@ -25,10 +24,9 @@ Accordion.Item = ({children, ...props}) => {
 Accordion.Title = ({children, ...props}) => <Title {...props}>{children}</Title>;
 
 Accordion.Header = ({children, ...props}) => {
-    const [toggleShow, useToggleShow] = useContext(ToggleContext);
-
+    const [toggleShow, setToggleShow] = useContext(ToggleContext);
     return (
-        <Header {...props}>
+        <Header onClick={() => setToggleShow(!toggleShow)} {...props}>
             {children}
             {toggleShow ? 
                 <img src="./images/icons/close-slim.png" alt="Close"/> :
@@ -39,7 +37,8 @@ Accordion.Header = ({children, ...props}) => {
 };
 
 Accordion.Body = ({children, ...props}) => {
-    const {toggleShow} = useContext(ToggleContext);
+    const [toggleShow] = useContext(ToggleContext);
+    
     return (toggleShow ? <Body {...props}>{children}</Body> : null);
 };
 
