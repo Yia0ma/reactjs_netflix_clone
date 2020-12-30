@@ -15,7 +15,7 @@ Accordion.Item = ({children, ...props}) => {
     const [toggleShow, setToggleShow] = useState(false);
 
     return (
-        <ToggleContext.Provider value={[toggleShow, setToggleShow]}>
+        <ToggleContext.Provider value={{toggleShow, setToggleShow}}>
             <Item {...props}>{children}</Item>
         </ToggleContext.Provider>
     );
@@ -24,7 +24,7 @@ Accordion.Item = ({children, ...props}) => {
 Accordion.Title = ({children, ...props}) => <Title {...props}>{children}</Title>;
 
 Accordion.Header = ({children, ...props}) => {
-    const [toggleShow, setToggleShow] = useContext(ToggleContext);
+    const {toggleShow, setToggleShow} = useContext(ToggleContext);
     return (
         <Header onClick={() => setToggleShow(!toggleShow)} {...props}>
             {children}
