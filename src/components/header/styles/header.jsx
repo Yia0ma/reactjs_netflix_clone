@@ -10,6 +10,7 @@ export const Background = styled.section`
     @media (max-width: 949px) {
         ${({dontShowOnSmallViewPort}) => dontShowOnSmallViewPort && "background: none;"}
     }
+    border-bottom: 8px solid #222;
 `;
 
 export const Container = styled.div`
@@ -19,7 +20,6 @@ export const Container = styled.div`
     padding: 1.12em 0;
     justify-content: space-between;
     align-items: center;
-
     a {
         display: flex;
     }
