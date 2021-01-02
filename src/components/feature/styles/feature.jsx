@@ -4,8 +4,8 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: 50%;
-    padding: 6em 0;
+    width: 70%;
+    padding: 4em 0;
     margin: 0 auto;
 
     @media (max-width: 949px) {
@@ -15,7 +15,13 @@ export const Container = styled.div`
 
 export const Title = styled.h1`
     color: #fff;
-    font-size: 4rem;
+    font-size: 3rem;
+    width: 80%;
+    margin: 0 auto;
+
+    @media (max-width: 949px) {
+        font-size: 2.5rem;
+    }
 
     @media (max-width: 549px) {
         font-size: 1.75em;
