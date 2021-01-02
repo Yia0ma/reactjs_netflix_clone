@@ -25,7 +25,8 @@ export const Inner = styled.div`
 
 export const Frame = styled.div`
     width: 75%;
-    margin: 2em auto;
+    margin: 0 auto;
+    margin-top: 2em;
 
     @media (max-width: 949px) {
         width: 90%;

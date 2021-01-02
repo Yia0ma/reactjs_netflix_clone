@@ -16,8 +16,8 @@ export const Container = styled.div`
 export const Text = styled.p`
     font-size: 1.2rem;
     color: #fff;
-    padding: 0 5%;
-    padding-bottom: 1.25em;
+    padding: 1.25em 5%;
+    padding-bottom: ;
     width: 100%;
 
     @media (max-width: 949px) {
