@@ -18,6 +18,7 @@ export const Text = styled.p`
     color: #fff;
     padding: 0 5%;
     padding-bottom: 1.25em;
+    width: 100%;
 
     @media (max-width: 949px) {
         font-size: 1.5rem;
