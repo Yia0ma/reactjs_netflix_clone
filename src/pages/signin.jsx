@@ -8,6 +8,8 @@ const Signin = () => {
     const [emailAddress, setEmailAddress] = useState("");
     const [password, setPassword] = useState("");
 
+    const isInvalid = password === "" | emailAddress === "";
+
     const handleSignIn = (event) => {
         event.preventDefault();
     }
@@ -32,7 +34,7 @@ const Signin = () => {
                         autoComplete="off"
                         onChange={({target}) => setPassword(target.value)}
                     />
-                    <Form.Button disabled="false" type="submit">
+                    <Form.Button disabled={isInvalid} type="submit">
                         Sign In
                     </Form.Button>
                     <Form.Text>

@@ -86,6 +86,7 @@ export const Button = styled.button`
     cursor: pointer;
 
     &:disabled {
+        cursor: default;
         opacity: .5;
     }
 `;
