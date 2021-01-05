@@ -13,15 +13,17 @@ const SelectProfileConatiner = ({user, setProfile}) => (
             </Header.Frame>
         </Header>
         <Profiles>
-            <Profiles.User 
-                onClick={() => setProfile({
-                    displayName: user.displayName,
-                    photoURL: user.photoUrl
-            })}>
-                <Profiles.Title>Who's watching?</Profiles.Title>
-                <Profiles.Picture src={user.photoUrl} />
-                <Profiles.Name>{user.displayName}</Profiles.Name>
-            </Profiles.User>
+            <Profiles.Title>Who's watching?</Profiles.Title>
+            <Profiles.List>
+                <Profiles.User 
+                    onClick={() => setProfile({
+                        displayName: user.displayName,
+                        photoURL: user.photoUrl
+                })}>
+                    <Profiles.Picture src={user.photoUrl} />
+                    <Profiles.Name>{user.displayName}</Profiles.Name>
+                </Profiles.User>
+            </Profiles.List>
         </Profiles>
     </>
 );
