@@ -13,7 +13,10 @@ import {
     PlayButton,
     Search,
     SearchIcon,
-    SearchInput} from "./styles/header";
+    SearchInput,
+    Profile,
+    Picture,
+    Dropdown} from "./styles/header";
 
 const Header = ({bg=true, children, ...props}) => 
     bg ? <Background {...props}>{children}</Background> : children;
@@ -57,4 +60,11 @@ Header.Search = ({searchTerm, setSearchTerm, ...props}) => {
         </Search>
     );
 }
+
+Header.Profile = ({children, ...props}) => <Profile {...props}>{children}</Profile>;
+
+Header.Picture = ({src, ...props}) => <Picture src={`images/users/${src}.png`} {...props}/>;
+
+Header.Dropdown = ({children, ...props}) => <Dropdown {...props}>{children}</Dropdown>;
+
 export default Header;
