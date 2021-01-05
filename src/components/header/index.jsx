@@ -3,7 +3,7 @@ import {Link as ReachRouterLink} from "react-router-dom";
 import {Background, Container, Logo, ButtonLink} from "./styles/header";
 
 const Header = ({bg=true, children, ...props}) => 
-    bg ? <Background>{children}</Background> : {children};
+    bg ? <Background>{children}</Background> : children;
 
 Header.Frame = ({children, ...props}) => <Container {...props}>{children}</Container>;
 
