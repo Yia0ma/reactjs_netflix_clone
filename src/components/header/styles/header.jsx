@@ -4,7 +4,7 @@ import {Link as ReachRouterLink} from "react-router-dom";
 export const Background = styled.section`
     display: flex;
     flex-direction: column;
-    background: url(${({src}) => (src ? "../images/misc/${src}.jpg" : "../images/misc/home-bg.jpg")})
+    background: url(${({src}) => (src ? `../images/misc/${src}.jpg` : "../images/misc/home-bg.jpg")})
         top left / cover no-repeat;
 
     @media (max-width: 949px) {
@@ -72,4 +72,16 @@ export const Logo = styled.img`
         height: 2.81em;
         width: 10.43em;
     }
+`;
+
+export const Group = styled.div`
+    display: flex;
+    align-items: center;
+`;
+
+export const Text = styled.p`
+    color: #fff;
+    font-size: 22px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
 `;

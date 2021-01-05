@@ -24,6 +24,19 @@ export const List = styled.ul`
     justify-content: center;
 `;
 
+export const Picture = styled.img`
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border: 3px solid black;
+`;
+
+export const Name = styled.p`
+    color: #808080;
+    text-overflow: ellipsis;
+    font-size: 1rem;
+`;
+
 export const Item = styled.li`
     max-height: 200px;
     max-width: 200px;
@@ -44,18 +57,4 @@ export const Item = styled.li`
     &:last-of-type: {
         margin-right: 0;
     }
-`;
-
-
-export const Picture = styled.img`
-    width: 100%;
-    max-width: 150px;
-    height: auto;
-    border: 3px solid black;
-`;
-
-export const Name = styled.p`
-    color: #808080;
-    text-overflow: ellipsis;
-    font-size: 1rem;
 `;
