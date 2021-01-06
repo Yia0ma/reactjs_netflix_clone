@@ -1,12 +1,13 @@
 import React, {useState, useContext, createContext} from "react";
 import {
-    Conatiner,
+    Container,
     Group,
     Title,
     SubTitle,
     Text,
     Feature,
     FeatureTitle,
+    FeatureText,
     FeatureClose,
     Maturity,
     Content,
@@ -23,7 +24,7 @@ const Card = ({children, ...props}) => {
     const [itemFeature, setItemFeature] = useState(false);
 
     return (
-        <FeatureContext.Provider value={{}}>
+        <FeatureContext.Provider value={{showFeature, setShowFeature, itemFeature, setItemFeature}}>
             <Container {...props}>{children}</Container>
         </FeatureContext.Provider>
     );
@@ -56,15 +57,15 @@ Card.Item = ({item, children, ...props}) => {
 Card.Image = ({...props}) => <Image {...props}/>;
 
 Card.Feature = ({category, children, ...props}) => {
-    const {showFeature, itemFeature, setSHowFeature} = useContext(FeatureContext);
+    const {showFeature, itemFeature, setShowFeature} = useContext(FeatureContext);
 
     return showFeature ? (
         <Feature src={`images/${category}/${itemFeature.genre}/${itemFeature.slug}/large.jpg`}>
             <Content>
                 <FeatureTitle>{itemFeature.title}</FeatureTitle>
                 <FeatureText>{itemFeature.description}</FeatureText>
-                <FeatureClose onClick={() => setSHowFeature(false)}>
-                    <img src="image/icons/close.png" alt="Close"/>
+                <FeatureClose onClick={() => setShowFeature(false)}>
+                    <img src="./images/icons/close.png" alt="Close"/>
                 </FeatureClose>
                 <Group margin="30px 0" flexDirection="row" alignItems="center">
                     <Maturity rating={itemFeature.maturity}>{itemFeature.maturity < 12 ? 'PG' : itemFeature.maturity}</Maturity>

@@ -1,1 +1,1 @@
-export {default as selctionMap} from "./selectionMap";
+export {default as selectionMap} from "./selectionMap";
